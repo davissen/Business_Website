@@ -1,5 +1,7 @@
 require "sinatra"
 require "sendgrid-ruby"
+require "googlecharts"
+require "Gchart"
 
 
 get "/" do
@@ -15,5 +17,13 @@ get "/test" do
 end
 
 get "/login" do
+	@chart1 = Gchart.bar( 
+			:data => [50,10,14,67,100,41,100], 
+            :title => 'Your javascript level', 
+            :legend => ['Nuri'], 
+            :bg => {:color => '76A4FB', :type => 'solid'}, 
+            :bar_colors => 'ff0000'
+            )
+
 	erb :login
 end

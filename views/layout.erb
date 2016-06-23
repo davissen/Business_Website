@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		nav li {
+			list-style: none;
+			display: inline-block;
+			margin-left: 100px;
+		}
+
+		footer li {
+		list-style: none;
+		display: inline-block;
+		margin-left: 100px;
+		}
+
+		.bdr{
+		border-left: 1px solid black;
+		padding-left: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<img src="FOR EVERYTHING DIGITAL.jpg">
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/dream_code">Dream Code</a></li>
+				<li><a href="/test">Test</a></li>
+				<li><a href="/login">Results</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article>
+		<%= yield %>
+	</article>
+
+	<footer>
+			<ul>
+				<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+				<li class="bdr"><a href="https://twitter.com" target="_blank"> Twitter</a></li>
+				<li class="bdr"><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+				<li class="bdr"><a href="https://www.pinterest.com/" target="_blank">Pinterest</a></li>
+			</ul>
+	</footer>
+</body>
+</html>

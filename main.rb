@@ -1,18 +1,19 @@
 require "sinatra"
 require "sendgrid-ruby"
 
+
 get "/" do
 	erb :index
 end
 
-get "/" do
+get "/dream_code" do
 	erb :dream_code
 end
 
-get "/" do
+get "/test" do
 	erb :test
 end
 
-get "/" do
+get "/login" do
 	erb :login
 end

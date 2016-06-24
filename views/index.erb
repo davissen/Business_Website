@@ -1,1 +1,44 @@
-hello
+
+<head>
+	<style>
+		#button{
+			border: 1px solid white;
+			padding: 2px;
+		}
+
+		video{
+			z-index: -1;
+			width:100%;
+			height: 100%;
+
+
+		}
+
+		#content{
+			position: absolute;
+			z-index: 1;
+			margin: 0 auto;
+			text-align: center;
+			top: 70%;
+			font-size: 30px;
+			left: 25%;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+		<div id="wrap">
+		<div id="content">
+		<h3># Road to become a coding Jedi !!</h3><br>
+		<span id="button">
+			Do Coding Test
+		</span>
+		</div>
+		<video preload="auto" autoplay="true" loop="loop" muted="muted">
+			<source src="video.ogv" type="video/ogv">
+			<source src="video.webm" type="video/webm">
+			Video Not Supported
+		</video>
+		</div>
+
+</body>

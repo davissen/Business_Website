@@ -16,9 +16,11 @@ get "/test" do
 	erb :test
 end
 
+array1 = [50,10,14,67,100,41,100]
+
 get "/login" do
 	@chart1 = Gchart.bar( 
-			:data => [50,10,14,67,100,41,100], 
+			:data => array1, 
             :title => 'Your javascript level', 
             :legend => ['Nuri'], 
             :bg => {:color => '76A4FB', :type => 'solid'}, 

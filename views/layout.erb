@@ -7,31 +7,29 @@
 			margin: 0;
 			padding: 0;
 		}
+
 		body{
-			
-			width: 100%;
-			margin: 0 auto;
-			padding: 0px;
-			top: 0;
-			height: 100vh;
+			background-color: #848C8E;
 		}
 		header{
-			display: absolute;
-			top: 0;
 		}
+
 		header img{
-			display: absolute;
 			width: 100%;
-			float: left;
-			margin: 0 auto;
-			top: 0;
 		}
+
+		nav{
+			position: fixed;
+			float: left;
+			top:0px;
+			left: 0px;
+		}
+
 		nav li {
 			list-style: none;
-			display: inline-block;
-			background-color: darkblue;
+			display: inline;
 			text-align: center;
-			margin: 0 5%;
+			padding: 0px 4px;
 		}
 
 		footer li {
@@ -49,7 +47,7 @@
 </head>
 <body>
 	<header>
-		<img src="FOR EVERYTHING DIGITAL.jpg">
+		<img src="Dream.jpg">
 		<nav>
 			<ul>
 				<li><a href="/">Home</a></li>
@@ -60,14 +58,13 @@
 		</nav>
 	</header>
 		<%= yield %>
-
 	<footer>
-			<ul>
-				<li class="bdr"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-				<li class="bdr"><a href="https://twitter.com" target="_blank"> Twitter</a></li>
-				<li class="bdr"><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
-				<li class="bdr"><a href="https://www.pinterest.com/" target="_blank">Pinterest</a></li>
-			</ul>
+		<ul>
+			<li class="bdr"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+			<li class="bdr"><a href="https://twitter.com" target="_blank"> Twitter</a></li>
+			<li class="bdr"><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+			<li class="bdr"><a href="https://www.pinterest.com/" target="_blank">Pinterest</a></li>
+		</ul>
 	</footer>
 </body>
 </html>

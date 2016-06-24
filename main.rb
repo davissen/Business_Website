@@ -16,13 +16,16 @@ get "/test" do
 	erb :test
 end
 
-array1 = [50,10,14,67,100,41,100]
 
-get "/login" do
+post "/login" do
+	@num1 = params[:quiz].to_i
+	array1 = []
+	array1.push(@num1)
+
 	@chart1 = Gchart.bar( 
 			:data => array1, 
             :title => 'Your javascript level', 
-            :legend => ['Nuri'], 
+            :legend => array1, 
             :bg => {:color => '76A4FB', :type => 'solid'}, 
             :bar_colors => 'ff0000'
             )

@@ -18,19 +18,8 @@
 			width: 100%;
 		}
 
-		nav{
-			position: fixed;
-			float: left;
-			top:0px;
-			left: 0px;
-		}
 
-		nav li {
-			list-style: none;
-			display: inline;
-			text-align: center;
-			padding: 0px 4px;
-		}
+
 
 		footer li {
 			list-style: none;
@@ -48,16 +37,26 @@
 <body>
 	<header>
 		<img src="Dream.jpg">
-		<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/dream_code">Dream Code</a></li>
-				<li><a href="/test">Test</a></li>
-				<li><a href="/login">Results</a></li>
-			</ul>
-		</nav>
+		<a href="#menu" id ="toggle"><span>Menu</span></a>
+
+		<Span id="menu">
+		<ul>	
+			<li><a href="/">Home</a></li>
+			<li><a href="/dream_code">Dream Code</a></li>
+			<li><a href="/test">Test</a></li>
+			<li><a href="/login">Results</a></li>
+		</ul>
+	</span>
 	</header>
 		<%= yield %>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#toggle').click(function(){
+				$('#menu').toggle()
+			})
+		})
+	</script>
 	<footer>
 		<ul>
 			<li class="bdr"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>

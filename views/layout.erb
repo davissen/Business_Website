@@ -18,8 +18,21 @@
 			width: 100%;
 		}
 
+		a{
+			cursor: pointer;
+			color: white;
+			text-decoration: none;
+		}
 
+		nav{
+			position: fixed;
+			z-index: 4;
+		}
 
+		a:hover{
+			font-size: 20px;
+			text-decoration: none;
+		}
 
 		footer li {
 			list-style: none;
@@ -37,16 +50,16 @@
 <body>
 	<header>
 		<img src="Dream.jpg">
+		<nav>
 		<a href="#menu" id ="toggle"><span>Menu</span></a>
-
-		<Span id="menu">
-		<ul>	
-			<li><a href="/">Home</a></li>
-			<li><a href="/dream_code">Dream Code</a></li>
-			<li><a href="/test">Test</a></li>
-			<li><a href="/login">Results</a></li>
-		</ul>
-	</span>
+			<Span id="menu">
+			<ul>	
+				<li><a href="/">Home</a></li>
+				<li><a href="/dream_code">Dream Code</a></li>
+				<li><a href="/login">Results</a></li>
+			</ul>
+			</Span>
+		</nav>
 	</header>
 		<%= yield %>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

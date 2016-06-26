@@ -16,6 +16,13 @@ get "/test" do
 	erb :test
 end
 
+get "/login" do
+	erb :login
+end
+
+get "/contact" do
+	erb :contact
+end
 
 post "/login" do
 	@num1 = params[:quiz].to_i
@@ -32,3 +39,52 @@ post "/login" do
 
 	erb :login
 end
+
+post "/email_response" do
+	
+	 mail_person = SendGrid::Client.new do |mp|
+	   mp.api_key = ENV["SENDGRID_APIKEY"]
+	 end
+
+	mail = SendGrid::Mail.new do |m|
+	m.to = params[:to]
+	m.from = params[:from]
+	m.subject = params[:subject]
+	m.text = params[:body]
+	end
+
+
+	response = mail_person.send(mail)
+
+	puts response.code
+	puts response.body
+	redirect "/email"
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

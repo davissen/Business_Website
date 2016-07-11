@@ -24,21 +24,21 @@ get "/contact" do
 	erb :contact
 end
 
-post "email/response" do
+post "/email_response" do
 	#https://sendgrid.com/docs/Integrate/Code_Examples/v3_Mail/ruby.html
 	# replace the example API values with the values from the value of html form using the names of the elements
-	@from = Email.new(email: params[:from])
-	@to = Email.new(email: params[:to])
-	@subject = params[:subject]
-	@body = Content.new(type: 'text/plain', value: params[:body])
-	#use above objects to create mail object
-	mail = Mail.new(from, subject, to, content)
+	# @from = Email.new(email: params[:from])
+	# @to = Email.new(email: params[:to])
+	# @subject = params[:subject]
+	# @body = Content.new(type: 'text/plain', value: params[:body])
+	# #use above objects to create mail object
+	# mail = Mail.new(from, subject, to, content)
 
-	sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-	response = sg.client.mail._('send').beta.post(request_body: mail.to_json)
-	puts response.status_code
-	puts response.response_body
-	puts response.response_headers
+	# sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+	# response = sg.client.mail._('send').beta.post(request_body: mail.to_json)
+	# puts response.status_code
+	# puts response.response_body
+	# puts response.response_headers
 
 	erb :contact
 
